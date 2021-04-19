@@ -1,0 +1,2 @@
+/*! platinum 2015-04-16 */
+KISSY.use("dom,event,json",function(a,b,c,d){a.windowReady=function(a){var b=window.onload;window.onload="function"!=typeof window.onload?a:function(){b(),a()}},a.windowReady(function(){c.delegate(document,"click",".J_TGoldData",function(c){var e=c.currentTarget,f="//go.mmstat.com"+b.attr(e,"data-gold-url"),g={};"click/type"===b.attr(e,"data-gold-type")&&(b.attr(e,"data-gold-data")&&(g=d.parse(b.attr(e,"data-gold-data"))),goldlog.send(f,a.mix({logtype:5,cache:a.now()},g)))})})});
